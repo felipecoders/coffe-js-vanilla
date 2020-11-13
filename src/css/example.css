@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto+Mono&display=swap');
+
+:root {
+  --bg: #232332;
+  --color: #f8f8f8;
+  --color-html-dark: #f4460d;
+  --color-html-light: #e5622a;
+  --color-css-dark: #0073bb;
+  --color-css-light: #00a9e6;
+  --color-javascript-dark: #cfb430;
+  --color-javascript-light: #f7d33c;
+
+  font-size: 60%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  transition: color 300ms, background-color 600ms;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  color: var(--color);
+  font-size: 8rem;
+}
+
+h3 {
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+h3 > span {
+  font-size: 5rem;
+  font-family: 'Roboto Mono', monospace;
+  position: relative;
+}
+
+h3 > span::after {
+  content: '';
+  left: calc(100% + 1rem);
+  top: 50%;
+  width: 5px;
+  height: 80%;
+  display: block;
+  position: absolute;
+  transform: translateY(-50%);
+  animation-name: cursor-animation;
+  animation-timing-function: ease-out;
+  animation-duration: 600ms;
+  animation-iteration-count: infinite;
+  border-radius: 2px;
+}
+
+h3.html > span,
+h3.html ~ ul a {
+  color: var(--color-html-dark);
+}
+h3.html > span::after {
+  background-color: var(--color-html-dark);
+}
+
+h3.css > span,
+h3.css ~ ul a {
+  color: var(--color-css-dark);
+}
+h3.css > span::after {
+  background-color: var(--color-css-dark);
+}
+
+h3.javascript > span,
+h3.javascript ~ ul a {
+  color: var(--color-javascript-dark);
+}
+h3.javascript > span::after {
+  background-color: var(--color-javascript-dark);
+}
+
+ul {
+  margin-top: 3rem;
+}
+
+ul > li {
+  font-size: 1.6rem;
+  color: var(--color);
+}
+
+ul > li > a:hover {
+  color: var(--color);
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  color: var(--color);
+  display: flex;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+footer > span:first-of-type {
+  margin-right: 1rem;
+}
+footer > span:last-of-type {
+  margin-left: 1rem;
+}
+
+footer > strong {
+  cursor: pointer;
+  color: crimson;
+  animation: heart-pulse 400ms infinite linear;
+}
+
+@keyframes cursor-animation {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes heart-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50%,
+  70% {
+    transform: scale(1.2);
+  }
+}
