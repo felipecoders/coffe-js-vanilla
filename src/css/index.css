@@ -74,7 +74,7 @@ header.header > nav > #cart {
   position: relative;
 }
 
-header.header > nav > #cart >  button {
+header.header > nav > #cart > button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,7 +88,7 @@ header.header > nav > #cart >  button {
   border: 0;
   transition: all 200ms;
 }
-header.header > nav > #cart >  ul {
+header.header > nav > #cart > ul {
   right: 0;
   width: 320px;
   max-height: 1px;
@@ -111,23 +111,61 @@ header.header > nav > #cart > ul.active {
   max-height: 50vh;
   overflow: visible;
 }
-header.header > nav > #cart >  ul > li {
+header.header > nav > #cart > ul > li {
   list-style: none;
   padding: 0.4rem;
   display: flex;
   align-items: flex-end;
 }
-header.header > nav > #cart >  ul > li > strong {
+
+header.header > nav > #cart > ul > li > button {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  border: 0;
+  border-radius: 2px;
+  background-color: #fff;
+  color: crimson;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, color 0.1s;
+}
+
+header.header > nav > #cart > ul > li > button:hover {
+  background: crimson;
+  color: #fff;
+}
+
+header.header > nav > #cart > ul > li > strong {
   flex: 1;
   font-size: 12px;
 }
-header.header > nav > #cart >  ul > li > span.amount {
+header.header > nav > #cart > ul > li > span.amount {
   font-size: 10px;
 }
-header.header > nav > #cart >  ul > li > span.price {
+header.header > nav > #cart > ul > li > span.price {
   font-size: 12px;
   margin-left: 0.4rem;
   font-weight: bold;
+}
+
+header.header > nav > #cart footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  padding: 0.5rem 0.5rem 0;
+}
+
+header.header > nav > #cart footer > span {
+  font-size: 0.8rem;
+}
+
+header.header > nav > #cart footer > strong {
+  font-size: 1.2rem;
 }
 
 /* #endregion */

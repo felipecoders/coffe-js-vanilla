@@ -1,14 +1,8 @@
-class App {
+class App extends AppBase {
   constructor() {
-    this.newsletter = new Newsletter({ target: 'form#subscribe' })
-    this.cart = new Cart({ target: '#cart' })
+    super()
 
     new Form()
-
-    this.start()
-  }
-
-  start() {
   }
 }
 
